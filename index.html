@@ -50,6 +50,7 @@
       align-items: center;
       font-size: 14px;
       transition: transform 0.3s ease;
+      position: relative;
     }
     .skill-item i {
       font-size: 32px;
@@ -62,6 +63,24 @@
     .skill-item:hover i {
       color: var(--hover-color);
       transform: rotate(10deg);
+    }
+    .skill-item span {
+      position: absolute;
+      bottom: -30px;
+      background: var(--secondary-color);
+      color: var(--text-color);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      opacity: 0;
+      transform: translateY(5px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .skill-item:hover span {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -89,19 +108,24 @@
     <h2>Skills</h2>
     <div class="skill-grid">
       <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-        <i class="fab fa-html5"></i><span>HTML5</span>
+        <i class="fab fa-html5"></i>
+        <span>HTML5</span>
       </div>
       <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-        <i class="fab fa-css3-alt"></i><span>CSS3</span>
+        <i class="fab fa-css3-alt"></i>
+        <span>CSS3</span>
       </div>
       <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-        <i class="fab fa-js"></i><span>JavaScript</span>
+        <i class="fab fa-js"></i>
+        <span>JavaScript</span>
       </div>
       <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-        <i class="fab fa-python"></i><span>Python</span>
+        <i class="fab fa-python"></i>
+        <span>Python</span>
       </div>
       <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
-        <i class="fab fa-git-alt"></i><span>Git</span>
+        <i class="fab fa-git-alt"></i>
+        <span>Git</span>
       </div>
     </div>
   </section>
