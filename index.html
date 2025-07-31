@@ -2,205 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Umesh | Freelancer Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Sanket Bhamare | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap2ndbChb8ff6bA8kaYAI2dxjA4oF+Q3yWUZmA08OlKhvPxVqeg6DWg2x+wBtuCkLym8MGWcdt/oxjsLMRW0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <style>
-    :root {
-      --bg-color: #f4f4f4;
-      --text-color: #333;
-      --primary-color: #333;
-      --secondary-color: #fff;
-    }
-    [data-theme="dark"] {
-      --bg-color: #1e1e1e;
-      --text-color: #fff;
-      --primary-color: #fff;
-      --secondary-color: #333;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-      line-height: 1.6;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background 0.3s, color 0.3s;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary-color), #555);
-      color: var(--secondary-color);
-      padding: 60px 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    nav {
-      margin-bottom: 20px;
-    }
-    nav a {
-      color: var(--secondary-color);
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
-    #themeToggle {
-      cursor: pointer;
-      padding: 8px;
-      background: transparent;
-      color: var(--secondary-color);
-      border: 2px solid var(--secondary-color);
-      border-radius: 5px;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid var(--primary-color);
-      margin-bottom: 20px;
-    }
-    .icon-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-      gap: 20px;
-      text-align: center;
-      font-size: 32px;
-    }
-    .project, .testimonial {
-      background: var(--secondary-color);
-      padding: 20px;
-      margin: 20px 0;
-      border-left: 4px solid var(--primary-color);
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      padding: 12px 25px;
-      background: var(--primary-color);
-      color: var(--secondary-color);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: #fff;
-      font-size: 14px;
-    }
-  </style>
 </head>
-<body data-theme="light">
-  <header>
-    <h1>Umesh Chaudhari</h1>
-    <p>Freelance Web Developer</p>
+<body>
+  <header id="home" data-aos="fade-down">
     <nav>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#services">Services</a>
-      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
-      <button id="themeToggle">Toggle Theme</button>
     </nav>
+    <h1>Hi, I’m Sanket Bhamare</h1>
+    <p>Web Developer & Tech Enthusiast</p>
   </header>
 
   <section id="about" data-aos="fade-up">
+    <img src="assets/profile.jpg" alt="Sanket" class="profile-pic" />
     <h2>About Me</h2>
-    <img src="https://via.placeholder.com/150" alt="Profile" class="profile-pic">
-    <p>I am a passionate freelance web developer with experience in HTML, CSS, JavaScript, Python, and more. I love building clean, modern, and user-friendly websites that deliver real value.</p>
+    <p>I’m a BTech student with passion for cyber security and programming, skilled in C++, Java, Python and web development.</p>
+  </section>
+
+  <section id="skills" data-aos="zoom-in">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div>HTML5</div>
+      <div>CSS3</div>
+      <div>JavaScript</div>
+      <div>Python</div>
+      <div>Git</div>
+    </div>
   </section>
 
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>A responsive personal portfolio using HTML, CSS, and JavaScript. Deployed with Vercel for seamless CI/CD.</p>
-    </div>
-    <div class="project">
-      <h3>Blog Platform</h3>
-      <p>A content management blog built with Flask and PostgreSQL, featuring user authentication and admin dashboard.</p>
-    </div>
-  </section>
-
-  <section id="services" data-aos="fade-up">
-    <h2>Services</h2>
-    <ul>
-      <li>✅ Website Development</li>
-      <li>✅ UI/UX Design</li>
-      <li>✅ SEO Optimization</li>
-      <li>✅ Bug Fixing & Maintenance</li>
-    </ul>
-  </section>
-
-  <section id="skills" data-aos="fade-up">
-    <h2>Skills</h2>
-    <div class="icon-grid">
-      <div><i class="fab fa-html5"></i><p>HTML5</p></div>
-      <div><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
-      <div><i class="fab fa-js"></i><p>JavaScript</p></div>
-      <div><i class="fab fa-react"></i><p>React</p></div>
-      <div><i class="fab fa-python"></i><p>Python</p></div>
-      <div><i class="fab fa-github"></i><p>GitHub</p></div>
-    </div>
-  </section>
-
-  <section id="testimonials" data-aos="fade-up">
-    <h2>Testimonials</h2>
-    <div class="testimonial">
-      <blockquote>"Umesh delivered a high-quality website on time. Very professional and easy to work with!" - Client A</blockquote>
-    </div>
-    <div class="testimonial">
-      <blockquote>"Great communication, clean code, and excellent results. Highly recommended!" - Client B</blockquote>
+    <div class="project-card" data-aos="fade-right">
+      <h3>Project One</h3>
+      <p>Short description and technologies used.</p>
+      <a href="#">Live Demo</a> | <a href="#">Code</a>
     </div>
   </section>
 
   <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
-    <p>Email: umesh@example.com</p>
-    <p>LinkedIn: linkedin.com/in/umesh</p>
-    <form>
+    <p>Email: sanket@example.com</p>
+    <form data-aos="zoom-in-up">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
       <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit">Send</button>
     </form>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Umesh Chaudhari. All rights reserved. | Designed with ❤️</p>
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Sanket Bhamare</p>
   </footer>
 
+  <script src="scripts.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
-
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      const body = document.body;
-      const currentTheme = body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      body.setAttribute('data-theme', newTheme);
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
 </body>
