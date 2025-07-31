@@ -7,8 +7,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --primary-color: #333;
+      --secondary-color: #fff;
+    }
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --text-color: #fff;
+      --primary-color: #fff;
+      --secondary-color: #333;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: 2px solid var(--primary-color);
+      padding: 6px 12px;
+      border-radius: 4px;
+      color: var(--primary-color);
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body>
+<body data-theme="light">
+  <button class="dark-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
   <header id="home" data-aos="fade-down">
     <nav>
       <a href="#about">About</a>
@@ -29,11 +61,11 @@
   <section id="skills" data-aos="zoom-in">
     <h2>Skills</h2>
     <div class="skill-grid">
-      <div>HTML5</div>
-      <div>CSS3</div>
-      <div>JavaScript</div>
-      <div>Python</div>
-      <div>Git</div>
+      <div data-aos="zoom-in" data-aos-delay="100">HTML5</div>
+      <div data-aos="zoom-in" data-aos-delay="200">CSS3</div>
+      <div data-aos="zoom-in" data-aos-delay="300">JavaScript</div>
+      <div data-aos="zoom-in" data-aos-delay="400">Python</div>
+      <div data-aos="zoom-in" data-aos-delay="500">Git</div>
     </div>
   </section>
 
@@ -42,6 +74,16 @@
     <div class="project-card" data-aos="fade-right">
       <h3>Project One</h3>
       <p>Short description and technologies used.</p>
+      <a href="#">Live Demo</a> | <a href="#">Code</a>
+    </div>
+    <div class="project-card" data-aos="fade-left">
+      <h3>Project Two</h3>
+      <p>A task tracker app built using React and Firebase.</p>
+      <a href="#">Live Demo</a> | <a href="#">Code</a>
+    </div>
+    <div class="project-card" data-aos="zoom-in-up">
+      <h3>Project Three</h3>
+      <p>Blog website developed using Flask and PostgreSQL.</p>
       <a href="#">Live Demo</a> | <a href="#">Code</a>
     </div>
   </section>
@@ -68,6 +110,12 @@
       duration: 1000,
       once: true
     });
+
+    function toggleTheme() {
+      const body = document.body;
+      const current = body.getAttribute('data-theme');
+      body.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+    }
   </script>
 </body>
 </html>
