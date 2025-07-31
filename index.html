@@ -1,63 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umesh | Freelancer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #333, #555);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .project, .testimonial {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 4px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .project:hover, .testimonial:hover {
+      transform: translateY(-5px);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 12px 25px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      font-size: 14px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <header id="home">
+  <header>
+    <h1>Umesh Chaudhari</h1>
+    <p>Freelance Web Developer</p>
     <nav>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
-    <h1>Hi, I'm [Your Name]</h1>
-    <p>Freelance Web Developer | UI/UX | Problem Solver</p>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Brief intro about your background, passions, and focus areas.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <div class="grid">
-      <div>HTML</div>
-      <div>CSS</div>
-      <div>JavaScript</div>
-      <div>React / Node.js</div>
-      <!-- Add icons or logos if desired -->
-    </div>
+    <p>I am a passionate freelance web developer with experience in HTML, CSS, JavaScript, Python, and more. I love building clean, modern, and user-friendly websites that deliver real value.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Project Name</h3>
-      <p>Short description and outcome.</p>
-      <a href="https://live-demo-link.com" target="_blank">Live</a>
-      <a href="https://github.com/yourrepo" target="_blank">Code</a>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A responsive personal portfolio using HTML, CSS, and JavaScript. Deployed with Vercel for seamless CI/CD.</p>
     </div>
-    <!-- Repeat for each project -->
+    <div class="project">
+      <h3>Blog Platform</h3>
+      <p>A content management blog built with Flask and PostgreSQL, featuring user authentication and admin dashboard.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>✅ Website Development</li>
+      <li>✅ UI/UX Design</li>
+      <li>✅ SEO Optimization</li>
+      <li>✅ Bug Fixing & Maintenance</li>
+    </ul>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      <blockquote>"Umesh delivered a high-quality website on time. Very professional and easy to work with!" - Client A</blockquote>
+    </div>
+    <div class="testimonial">
+      <blockquote>"Great communication, clean code, and excellent results. Highly recommended!" - Client B</blockquote>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
+    <p>Email: umesh@example.com</p>
+    <p>LinkedIn: linkedin.com/in/umesh</p>
     <form>
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Your Email" required/>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
       <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 Your Name — Built by You</p>
+    <p>&copy; 2025 Umesh Chaudhari. All rights reserved. | Designed with ❤️</p>
   </footer>
-  <script src="scripts.js"></script>
 </body>
 </html>
