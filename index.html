@@ -5,7 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Umesh | Freelancer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap2ndbChb8ff6bA8kaYAI2dxjA4oF+Q3yWUZmA08OlKhvPxVqeg6DWg2x+wBtuCkLym8MGWcdt/oxjsLMRW0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --primary-color: #333;
+      --secondary-color: #fff;
+    }
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --text-color: #fff;
+      --primary-color: #fff;
+      --secondary-color: #333;
+    }
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,12 +28,13 @@
     }
     body {
       line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
     }
     header {
-      background: linear-gradient(135deg, #333, #555);
-      color: #fff;
+      background: linear-gradient(135deg, var(--primary-color), #555);
+      color: var(--secondary-color);
       padding: 60px 20px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -28,7 +43,7 @@
       margin-bottom: 20px;
     }
     nav a {
-      color: #fff;
+      color: var(--secondary-color);
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
@@ -37,23 +52,41 @@
     nav a:hover {
       color: #ffd700;
     }
+    #themeToggle {
+      cursor: pointer;
+      padding: 8px;
+      background: transparent;
+      color: var(--secondary-color);
+      border: 2px solid var(--secondary-color);
+      border-radius: 5px;
+    }
     section {
       padding: 60px 20px;
       max-width: 900px;
       margin: auto;
-      animation: fadeIn 1s ease-in-out;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--primary-color);
+      margin-bottom: 20px;
+    }
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 20px;
+      text-align: center;
+      font-size: 32px;
     }
     .project, .testimonial {
-      background: #fff;
+      background: var(--secondary-color);
       padding: 20px;
       margin: 20px 0;
-      border-left: 4px solid #333;
+      border-left: 4px solid var(--primary-color);
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-    .project:hover, .testimonial:hover {
-      transform: translateY(-5px);
     }
     form input, form textarea {
       width: 100%;
@@ -64,15 +97,11 @@
     }
     form button {
       padding: 12px 25px;
-      background: #333;
-      color: #fff;
+      background: var(--primary-color);
+      color: var(--secondary-color);
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s;
-    }
-    form button:hover {
-      background: #555;
     }
     footer {
       text-align: center;
@@ -81,13 +110,9 @@
       color: #fff;
       font-size: 14px;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
-<body>
+<body data-theme="light">
   <header>
     <h1>Umesh Chaudhari</h1>
     <p>Freelance Web Developer</p>
@@ -97,15 +122,17 @@
       <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
+      <button id="themeToggle">Toggle Theme</button>
     </nav>
   </header>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
+    <img src="https://via.placeholder.com/150" alt="Profile" class="profile-pic">
     <p>I am a passionate freelance web developer with experience in HTML, CSS, JavaScript, Python, and more. I love building clean, modern, and user-friendly websites that deliver real value.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="project">
       <h3>Portfolio Website</h3>
@@ -117,7 +144,7 @@
     </div>
   </section>
 
-  <section id="services">
+  <section id="services" data-aos="fade-up">
     <h2>Services</h2>
     <ul>
       <li>✅ Website Development</li>
@@ -127,7 +154,19 @@
     </ul>
   </section>
 
-  <section id="testimonials">
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="icon-grid">
+      <div><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+      <div><i class="fab fa-js"></i><p>JavaScript</p></div>
+      <div><i class="fab fa-react"></i><p>React</p></div>
+      <div><i class="fab fa-python"></i><p>Python</p></div>
+      <div><i class="fab fa-github"></i><p>GitHub</p></div>
+    </div>
+  </section>
+
+  <section id="testimonials" data-aos="fade-up">
     <h2>Testimonials</h2>
     <div class="testimonial">
       <blockquote>"Umesh delivered a high-quality website on time. Very professional and easy to work with!" - Client A</blockquote>
@@ -137,7 +176,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <p>Email: umesh@example.com</p>
     <p>LinkedIn: linkedin.com/in/umesh</p>
@@ -152,5 +191,17 @@
   <footer>
     <p>&copy; 2025 Umesh Chaudhari. All rights reserved. | Designed with ❤️</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      body.setAttribute('data-theme', newTheme);
+    });
+  </script>
 </body>
 </html>
