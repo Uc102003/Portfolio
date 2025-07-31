@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap2ndbChb8ff6bA8kaYAI2dxjA4oF+Q3yWUZmA08OlKhvPxVqeg6DWg2x+wBtuCkLym8MGWcdt/oxjsLMRW0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --bg-color: #f4f4f4;
@@ -36,6 +37,22 @@
       color: var(--primary-color);
       cursor: pointer;
     }
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+    }
+    .skill-item i {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body data-theme="light">
@@ -61,11 +78,21 @@
   <section id="skills" data-aos="zoom-in">
     <h2>Skills</h2>
     <div class="skill-grid">
-      <div data-aos="zoom-in" data-aos-delay="100">HTML5</div>
-      <div data-aos="zoom-in" data-aos-delay="200">CSS3</div>
-      <div data-aos="zoom-in" data-aos-delay="300">JavaScript</div>
-      <div data-aos="zoom-in" data-aos-delay="400">Python</div>
-      <div data-aos="zoom-in" data-aos-delay="500">Git</div>
+      <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fab fa-html5"></i><span>HTML5</span>
+      </div>
+      <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fab fa-css3-alt"></i><span>CSS3</span>
+      </div>
+      <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fab fa-js"></i><span>JavaScript</span>
+      </div>
+      <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fab fa-python"></i><span>Python</span>
+      </div>
+      <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+        <i class="fab fa-git-alt"></i><span>Git</span>
+      </div>
     </div>
   </section>
 
@@ -119,3 +146,4 @@
   </script>
 </body>
 </html>
+
